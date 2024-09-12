@@ -6,12 +6,12 @@ pipeline {
           ECR_REPO_NAME = 'food-delivery-gateway-service'  // Replace with your ECR repository name
 //           IMAGE_TAG = "${env.BUILD_ID}"  // Or use 'latest' or any other tag
           IMAGE_TAG = "latest"
-          WORKSPACE = "/var/lib/jenkins/workspace/food-delivery-discovery-server"
+          WORKSPACE = "/var/lib/jenkins/workspace/food-delivery-gateway-service"
     }
     stages {
         stage('Clone Repo to Build') {
             steps {
-                git url: 'https://github.com/Topsan2002/food-delivery-discovery-service.git',
+                git url: 'https://github.com/Topsan2002/food-delivery-gateway-service.git',
                     branch:'master'
             }
         }
